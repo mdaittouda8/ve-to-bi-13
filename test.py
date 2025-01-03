@@ -21,7 +21,7 @@ server = st.secrets["SQL_SERVER"]
 database = st.secrets["SQL_DATABASE"]
 username = st.secrets["SQL_USERNAME"]
 password = st.secrets["SQL_PASSWORD"]
-driver = {ODBC Driver 17 for SQL Server}
+driver = "{ODBC Driver 17 for SQL Server}"
 
 
 # Azure Cognitive Services configuration
