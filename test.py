@@ -5,23 +5,23 @@ import azure.cognitiveservices.speech as speechsdk
 import pyodbc
 import plotly.express as px
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from st_audiorec import st_audiorec
 from pathlib import Path
 
 # Load environment variables from .env file
-load_dotenv()
+#load_dotenv()
 
-# Access secrets from environment variables
-openai_key = os.getenv("OPENAI_API_KEY")
-speech_key = os.getenv("AZURE_SPEECH_KEY")
+# Access secrets
+openai_key = st.secrets["OPENAI_API_KEY"]
+speech_key = st.secrets["AZURE_SPEECH_KEY"]
 
 # Azure SQL Database Parameters
-server = os.getenv("SQL_SERVER")
-database = os.getenv("SQL_DATABASE")
-username = os.getenv("SQL_USERNAME")
-password = os.getenv("SQL_PASSWORD")
-driver = os.getenv("SQL_DRIVER")
+server = st.secrets["SQL_SERVER"]
+database = st.secrets["SQL_DATABASE"]
+username = st.secrets["SQL_USERNAME"]
+password = st.secrets["SQL_PASSWORD"]
+driver = st.secrets["SQL_DRIVER"]
 
 
 # Azure Cognitive Services configuration
