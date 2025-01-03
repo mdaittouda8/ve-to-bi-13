@@ -1,0 +1,3 @@
+unixodbc-dev
+msodbcsql18
+mssql-tools
